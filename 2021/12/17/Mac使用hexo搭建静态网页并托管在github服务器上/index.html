@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>first article | Hexo</title>
+  <title>Mac使用hexo搭建静态网页并托管在github服务器上 | 桐与酱汁的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="first article">
-<meta property="og:url" content="http://example.com/2021/12/12/first-article/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-12-12T14:55:21.000Z">
-<meta property="article:modified_time" content="2021-12-12T14:55:21.919Z">
-<meta property="article:author" content="John Doe">
+  <meta name="description" content="安装包准备 需要准备的安装包有：node.js和git。可以通过homebrew安装。 首先安装homebrew： Mac打开搜索，输入terminal进入终端  &#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;HEAD&#x2F;install.sh)&quot;  安装完成后我们正式安装node.js 和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac使用hexo搭建静态网页并托管在github服务器上">
+<meta property="og:url" content="http://example.com/2021/12/17/Mac%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E5%B9%B6%E6%89%98%E7%AE%A1%E5%9C%A8github%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/index.html">
+<meta property="og:site_name" content="桐与酱汁的博客">
+<meta property="og:description" content="安装包准备 需要准备的安装包有：node.js和git。可以通过homebrew安装。 首先安装homebrew： Mac打开搜索，输入terminal进入终端  &#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;HEAD&#x2F;install.sh)&quot;  安装完成后我们正式安装node.js 和">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-12-17T08:59:46.000Z">
+<meta property="article:modified_time" content="2021-12-17T15:51:43.025Z">
+<meta property="article:author" content="桐与酱汁">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="桐与酱汁的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -136,27 +138,63 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-first-article" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Mac使用hexo搭建静态网页并托管在github服务器上" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      first article
+      Mac使用hexo搭建静态网页并托管在github服务器上
     </h1>
   
 
         
-        <a href="/2021/12/12/first-article/" class="archive-article-date">
-  	<time datetime="2021-12-12T14:55:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-12</time>
+        <a href="/2021/12/17/Mac%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E5%B9%B6%E6%89%98%E7%AE%A1%E5%9C%A8github%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/" class="archive-article-date">
+  	<time datetime="2021-12-17T08:59:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-12-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ol>
+<li><strong>安装包准备</strong></li>
+需要准备的安装包有：node.js和git。可以通过homebrew安装。<br>
+首先安装homebrew：<br>
+Mac打开搜索，输入terminal进入终端 <br>
+<code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code> 
+安装完成后我们正式安装node.js 和 git <br>
+<code>brew node.js</code> <br>
+<code>brew git</code> <br>
+查看是否安装成功，我们可以在终端输入 <br>
+<code>node -v</code><br>
+<code>npm -</code><br>
+<code>git --version</code><br>
+如果分别显示出了他们的版本信息，表示安装成功了。
+<li><strong>安装hexo</strong></li>
+接下来我们正式安装hexo。<br>
+在终端输入<code>pwd</code>查看当前所在位置记录下路径，之后博客的编辑都需要通过这个路径进入。<br>
+输入<code>mkdir [name]</code>创建一个目录。例如<code>mkdir blog</code>我们就创建了一个名为blog的目录，然后我们进入这个目录<code>cd blog</code>。<br>
+在blog目录下，我们需要进入管理员身份，安装hexo，<strong>切记，后续编写博客都需要在管理员身份下进行</strong>。在终端输入<code>sudo su</code>然后会提醒让输入电脑登陆密码，成功输入后就进入管理员身份了。<br>
+在管理员身份下输入<code>npm install -g hexo-cli</code>。就只需要等待它下载了。同样的可以通过<code>hexo -v</code>来检查是否成功下载。
+<li><strong>使用hexo编写博客</strong></li>
+同样在终端，进入我们创建的blog目录后，输入<code>hexo init</code>初始化博客<br>
+输入<code>hexo s</code>hexo服务器就启动了，我们可以在本地预览博客，在浏览器输入localhost4000。<br>
+如果我们想编写一篇新的博客，先ctrl+c停止服务器，然后输入<code>hexo n "blogName"</hexo>一个新的博客就被创建到blog/source/_posts这个目录下，我们<code>cd source/_posts</code>进入这个目录，可以用自带的编辑器<code>vi blogName.md</code>进行编辑。<br>
+编辑完后<code>cd ../..</code>退回到blog目录下，输入<code>hexo clean</code></code>hexo g</code>我们就可以在本地看到一篇新的博客被更新上去了。
+到目前为止我们就成功使用hexo搭建起了自己的博客，最后只需要部署到github上即可。
+<li><strong>部署到GitHub上</strong></li>
+部署到GitHub上，首先得去GitHub上注册一个账号，然后创建新仓库要命名为githubusername.github.io。需要把githubusername更改为你注册的用户名。接下来在设置中(settings)找到开发者设置(developer settings)找到Personal access tokens,过期时间选择永不，然后勾选repo，就会生成一个token。复制这个token备用。<br>
+接下来进入终端，进入管理员身份，进入blog目录，输入<code>npm install hexo-deployer-git --save</code>等安装完成后输入<code>ls</code>查看当前目录下文件名，使用<code>vi _config.yml</code>对名为_config.yml的文件进行编辑。<br>
+滑到末尾可以看到Deloyment，在type后添加git，repo后添加https://token@github.com/githubusername/githubusername.github.io.git。在这个地方，token就需要输入之前在github上复制的token，githubusername为github用户名。branch后添加master。然后按esc，冒号，wq，enter。保存并退出_config.yml文件。<br>
+接下来就只需要输入<code>hexo d</code>然后输入github账号和密码，就可以把博客部署到github上了。<br>
+成功部署后就可以通过githubusername.github.io访问搭建的博客了。
+
+</ol>
+
+
+
       
 
       
@@ -235,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/12/12/first-article/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/12/17/Mac%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5%E5%B9%B6%E6%89%98%E7%AE%A1%E5%9C%A8github%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -247,16 +285,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-  
-    <a href="/2021/12/12/%E7%AC%AC%E4%B8%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第一</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -294,7 +322,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 John Doe
+    		&copy; 2021 桐与酱汁
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
