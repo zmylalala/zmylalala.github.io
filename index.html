@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Minyu Zhang's Homepage</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <script src="app.js"></script>
 </head>
+
+
 <body>
 
   <div class="sidebar">
     <div class="top">
-      <img src="avator.png" alt="avator" />
+      <img src="assets/avator.png" alt="avator" />
     </div>
     <nav class="middle">
       <a href="#home">Home</a>
@@ -20,18 +22,20 @@
       <a href="#experience">Work</a>
       <a href="#projects">Projects</a>
     </nav>
-    <div class="contact-links">
-      <a href="1370302950@qq.com" target="_blank">
-        <img src="icons/email.png" alt="Email" title="Email">
-      </a>
-      <a href="https://linkedin.com/in/yourname" target="_blank">
-        <img src="icons/linkedin.png" alt="LinkedIn" title="LinkedIn">
-      </a>
-      <a href="https://github.com/yourusername" target="_blank">
-        <img src="icons/github.png" alt="GitHub" title="GitHub">
-      </a>
+
+    <div class="bottom">
+      <div class="contact-links">
+        <a href="https://github.com/zmylalala" target="_blank">
+          <img src="assets/github.png" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank">
+          <img src="assets/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="1370302950@example.com">
+          <img src="assets/email.png" alt="Email">
+        </a>
+      </div>
     </div>
-    <div class="bottom"></div>
   </div>
 
   <div class="content">
@@ -66,7 +70,7 @@
           <strong>University of Waterloo</strong><em>, Canada</em><br>
           B.Math. in Statistics<br>
           Sept 2017 – Apr 2021<br>
-          <em>Relevant courses:</em> Probability, Statistical Inference, Regression, Data Visualization, Time Series, Machine Learning
+          <em>Core courses:</em> Probability, Statistical Inference, Regression, Data Visualization, Time Series, Machine Learning
         </li>
       </ul>
     </section>
@@ -95,13 +99,78 @@
 
     <section id="experience">
       <h2>Work Experience</h2>
-      <p>Work or teaching experience...</p>
+      <ul>
+        <li>
+          <strong>Deyang Data Exchange</strong><em>, Sichuan, China</em><br>
+          Data Product Manager<br>
+          Apr 2023 – Nov 2023
+          <p>
+            Designed prepaid card business scenarios by coordinating with banks, government agencies, and insurance companies to address regulatory issues. Supported the onboarding of over 30,000 merchants with cumulative regulated funds exceeding 600 million yuan.
+          </p>
+          <p>
+            Conducted policy research on the secure and efficient circulation of data elements within China's system. Explored separation mechanisms for data ownership, processing rights, and operational rights to manage data as a production factor while resolving security and circulation conflicts.
+          </p>
+        </li>
+
+        <li>
+          <strong>Sichuan Southwest Vocational College of Civil Aviation</strong><em>, Sichuan, China</em><br>
+          Member, AI and Big Data Teaching and Research Section<br>
+          Aug 2022 – Mar 2023
+          <p>
+            Taught linear algebra and database courses. Participated in student recruitment, interviews, and academic counseling. Developed and evaluated teaching materials, providing improvement recommendations.
+          </p>
+        </li>
+
+        <li>
+          <strong>TAL Education Group</strong><em>, Beijing, China</em><br>
+          Intern, Overseas Math Content R&D Team<br>
+          Apr 2021 – Jul 2021
+          <p>
+            Researched the math competition systems for Chinese middle school students in Silicon Valley. Analyzed AMC8–AMC12 competitions, refined key knowledge points, and designed teaching products.
+          </p>
+          <p>
+            Independently developed eight linear algebra lessons, built evaluation systems (e.g., correctness rate, refund rate), and performed product optimization based on student feedback and competitive analysis.
+          </p>
+        </li>
+      </ul>
     </section>
+
 
     <section id="projects">
       <h2>Projects</h2>
-      <p>Highlight key projects...</p>
+      <ul>
+        <li>
+          <strong>Homepage Optimization of Netflix using Response Surface Methodology</strong><br>
+          <p>
+            Applied Response Surface Methodology (RSM) to identify optimal combinations of preview length, preview size, and tile size to minimize user browsing time on the Netflix homepage. Conducted 2^k full factorial design, steepest descent method, and second-order central composite design. Found optimal settings at 100s preview length and 55% preview size, reducing average browsing time to 15.10 seconds.
+          </p>
+          <a href="https://github.com/zmylalala/Optimization-using-RSM" target="_blank">🔗 View on GitHub</a>
+        </li>
+
+        <li>
+          <strong>Garbage Classification using TensorFlow</strong><br>
+          <p>
+            Built a convolutional neural network using TensorFlow to classify 13 types of household garbage from images. Preprocessed images using <code>skimage</code>, resized them to 100×100×3, and trained the model on labeled datasets. The model achieved accurate predictions such as distinguishing between recyclable (glass, plastic, metal) and non-recyclable waste types.
+          </p>
+          <a href="https://github.com/zmylalala/GSS-using-CNN" target="_blank">🔗 View on GitHub</a>
+        </li>
+
+        <li>
+          <strong>Case Study on CryptoPunks: Blockchain Transaction Analysis</strong><br>
+          <p>
+            Analyzed historical trading data of CryptoPunks NFTs using SQL and Python. Extracted data from the Ethereum blockchain using Dune Analytics, focusing on ownership distribution, transaction volume trends, and the impact of major events (e.g., Visa purchase). Investigated decentralized contract structures and smart contract execution paths.
+          </p>
+          <a href="https://github.com/zmylalala/Cryptopunks_Analysis" target="_blank">🔗 View on GitHub</a>
+        </li>
+      </ul>
     </section>
+
+
+    <footer class="end-banner" id="endBanner">
+      <p>🎉 Thanks for reading! Wishing you a wonderful day. 🌻</p>
+      <button onclick="scrollToTop()" class="back-to-top">Back to Top</button>
+    </footer>
+
   </div>
 
 </body>
